@@ -1,15 +1,15 @@
 import React from "react";
+import About from "./About";
+import ArticleList from "./ArticleList";
+import Header from "./Header";
 import blogData from "../data/blog";
-
-console.log(blogData);
 
 function App() {
   return (
     <div>
-      <About  />
-      <Article  />
-      <ArticleList  />
-      <Header  />
+      <About about={blogData.about} />
+      <ArticleList posts={blogData.posts} />
+      <Header name={blogData.name} />
     </div>
   );
 }
